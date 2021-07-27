@@ -35,9 +35,16 @@ function getNextBlock() {
                         if (!errors) {
                         }
                     }
-                ).then(r => {
-                    if (r) {
-                        console.log(r)
+                ).then(events => {
+                    if (events) {
+                        console.log(events)
+                        events.forEach(event => {
+                            console.log(event.transactionHash)
+                        })
+                        /*web3.eth.getTransaction(r.transactionHash, function(err, receipt) {
+                            console.log(receipt.blockNumber)
+                        })*/
+
                     }
                 });
             }
@@ -45,4 +52,3 @@ function getNextBlock() {
 
     })
 }
-
