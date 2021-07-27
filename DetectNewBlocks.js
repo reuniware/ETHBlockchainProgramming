@@ -2,7 +2,7 @@ const Web3 = require("web3");
 
 let web3 = new Web3(
     // Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
-    new Web3.providers.WebsocketProvider("wss://mainnet.infura.io/ws/v3/cc44823998a0412294a4768078fcbfd1")
+    new Web3.providers.WebsocketProvider("wss://mainnet.infura.io/ws/v3/cc44823998a0412294a47680xxxxxxxx")
 );
 
 setInterval(getNextBlock, 2500)
