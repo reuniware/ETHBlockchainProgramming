@@ -37,14 +37,14 @@ function getNextBlock() {
                     }
                 ).then(events => {
                     if (events) {
-                        console.log(events)
+                        //console.log(events)
                         events.forEach(event => {
                             console.log(event.transactionHash)
-                        })
-                        /*web3.eth.getTransaction(r.transactionHash, function(err, receipt) {
-                            console.log(receipt.blockNumber)
-                        })*/
+                            web3.eth.getTransaction(event.transactionHash, function(err, receipt) {
+                                console.log(receipt.from + ' ' + receipt.to)
+                            })
 
+                        })
                     }
                 });
             }
