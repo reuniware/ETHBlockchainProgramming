@@ -37,7 +37,7 @@ const init = function () {
                     if (from !== null && from.toLowerCase() === addresses.uniswap_router.toLowerCase()) { show = true ; from = 'UniSwap Router'}
                     if (to !== null && to.toLowerCase() === addresses.uniswap_router.toLowerCase()) { show = true ; to = 'UniSwap Router'}
 
-                    if (show === true) console.log('FROM [' + from + '] TO [' + to +']')
+                    if (show === true) console.log('FROM [' + from + '] TO [' + to +']' + ' VALUE [' + web3.utils.fromWei(tx.value) + ' eth]')
                 }
             } catch (err) {
                 console.error(err);
